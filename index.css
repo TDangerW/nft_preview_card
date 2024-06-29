@@ -1,3 +1,9 @@
+:root {
+    --title-color: rgb(251, 255, 255);
+    --hover-color: aqua;
+    --text-color: rgb(105, 125, 152);
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -5,4 +11,148 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: rgb(13, 26, 45);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    height: 95vh;
+    /* Change height appropriately once the main styling is completed */
+}
+
+main {
+    margin-inline: auto;
+    width: 300px;
+    background-color: rgb(21, 39, 63);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 35px 10px 10px rgb(12, 23, 41),
+        0 15px 20px 20px rgb(12, 25, 44);
+}
+
+h1 {
+    color: var(--title-color);
+}
+
+h1:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container:hover {
+    cursor: pointer;
+}
+
+.image,
+.overlay {
+    position: absolute;
+    border-radius: 10px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* ChatGPT */
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.vector-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+    z-index: 2;
+}
+
+.image-container:hover .vector-image {
+    display: block;
+    z-index: 2;
+
+}
+
+/* ChatGPT */
+
+
+
+.jules {
+    color: rgb(181, 193, 209);
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.85px var(--text-color) solid;
+    padding: 5px;
+}
+
+.eth-icon {
+    width: 12px;
+    height: 18px;
+}
+
+.clock-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.details-column {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.value {
+    font-weight: bold;
+    color: var(--hover-color);
+}
+
+.profile-section {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile-section>img {
+    width: 36px;
+    height: 36px;
+    border: white 1px solid;
+    border-radius: 50%;
 }
