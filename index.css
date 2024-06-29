@@ -20,6 +20,7 @@ body {
     align-items: center;
     height: 95vh;
     /* Change height appropriately once the main styling is completed */
+    font-family: 'Outfit', sans-serif;
 }
 
 main {
